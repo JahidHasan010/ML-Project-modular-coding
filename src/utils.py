@@ -15,6 +15,14 @@ def save_object(file_path, obj):
             pickle.dump(obj, file_obj)
     except Exception as e:
         raise CustmeException(e, sys)
+
+
+def load_object(file_path):
+    try:
+        with open(file_path, "rb") as file_objt:
+            return pickle.load(file_objt)
+    except Exception as e:
+        raise CustmeException(e, sys)
     
 
 
